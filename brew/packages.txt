@@ -1,0 +1,60 @@
+###### Langauges
+erlang
+go
+groovy
+lua
+mit-scheme
+python
+scala
+# Frameworks
+node
+grails
+play
+####### Databases
+mongodb
+mysql
+redis
+sqlite
+###### Media
+ffmpeg
+lame
+media-info
+###### Build Systems
+maven
+ninja
+sbt
+gradle
+###### Version Control
+git
+mercurial
+####### Embedded
+binwalk
+##### Utilities
+tmux
+reattach-to-user-namespace
+heroku-toolbelt
+md5sha1sum
+tree
+watch
+bash-completion
+autojump
+####### Monitoring utilities
+htop-osx
+pstree
+pv
+pidof
+####### Downloaders
+lftp
+ncftp
+rtorrent --with-xmlrpc-c
+s3cmd
+wget
+######## Network / Benchmarking
+ab
+mtr
+####### Compilers and build tools
+apple-gcc42
+coreutils
+####### Security
+gnupg
+gnupg2

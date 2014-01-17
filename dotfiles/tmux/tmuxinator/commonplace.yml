@@ -1,0 +1,19 @@
+# ~/.tmuxinator/commonplace.yml
+
+name: commonplace
+root: ~/personal/commonplace
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+pre_window: export GITHUB_CLIENT_SECRET=0af42ab59fa8bf21b3b8ee4aeeac0a9772c7c961 && export GITHUB_CLIENT_ID=7b2c3935ba69b1dbd555 && export GITHUB_ORG_ID=SBS-internal
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - root:
