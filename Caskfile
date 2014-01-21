@@ -1,0 +1,52 @@
+# update homebrew tree
+update
+
+# upgrade outdated
+upgrade
+
+tap phinze/homebrew-cask
+install brew-cask
+
+# for older versions
+tap caskroom/versions
+
+# jre's jdk's
+cask install java
+cask install java6
+
+# Utils
+cask install dropbox
+cask install onepassword
+cask install caffeine
+cask install launchbar
+cask install sequel-pro
+cask install kaleidoscope
+cask install omnidisksweeper
+cask install unrarx
+cask install ynab
+cask install authy-bluetooth
+
+# Browsers
+cask install google-chrome
+
+# Internet
+cask install adium
+cask install charles
+cask install hipchat
+cask install transmit
+cask install transmission
+
+# Media
+cask install vlc
+cask install spotify
+cask install vox
+cask install sonos
+cask install instacast
+
+# Editors
+cask install sublime-text
+cask install intellij-idea-ultimate12
+cask install nvalt
+cask install mou
+
+cleanup
