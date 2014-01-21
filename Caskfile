@@ -15,6 +15,7 @@ cask install java
 cask install java6
 
 # Utils
+cask install iterm2
 cask install dropbox
 cask install onepassword
 cask install caffeine
