@@ -54,11 +54,10 @@ install pidof
 install wget
 install lftp
 install ncftp
-install rtorrent --with-xmlrpc-c
+install rtorrent
 install s3cmd
 
 # Network / benchmarking
-install ab
 install mtr
 
 # Utils
