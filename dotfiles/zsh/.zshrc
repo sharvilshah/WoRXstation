@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/WoRXstation/dotfiles/zsh/custom
+ZSH=$HOME/.oh-my-zsh
+
+export ZSH_CUSTOM=$HOME/WoRXstation/dotfiles/zsh/custom
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
