@@ -16,3 +16,5 @@ export JAVA_HOME=$(/usr/libexec/java_home )
 export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=1024m -XX:+HeapDumpOnOutOfMemoryError"
 export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=1024m -XX:+HeapDumpOnOutOfMemoryError"
 
+# Link Hombrew cask app to /Applications instead of ~/Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
