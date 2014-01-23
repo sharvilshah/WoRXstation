@@ -1,7 +1,11 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# path to the zsh custom folder
 export ZSH_CUSTOM=$HOME/WoRXstation/dotfiles/zsh/custom
+
+# path to the "private-config" folder
+PRIVATE_CONFIG=$HOME/WoRXstation/private-configs
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,3 +53,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
+
+# Source all *.zsh files in PRIVATE_CONFIG
+for config_file ($PRIVATE_CONFIG/*.zsh(N)); do
+	source $config_file
+done
+unset config_file
+unset PRIVATE_CONFIG
