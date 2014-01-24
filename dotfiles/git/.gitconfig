@@ -31,10 +31,10 @@
 	#   la = all commits, all reachable refs
 	head = !git l -1
 	h = !git head
-	hp = "!. ~/workstation/dotfiles/git/githelpers.sh && show_git_head"
+	hp = "!. ~/WoRXstation/dotfiles/git/githelpers.sh && show_git_head"
 	r = !git l -30
 	ra = !git r --all
-	l = "!. ~/workstation/dotfiles/git/githelpers.sh && pretty_git_log"
+	l = "!. ~/WoRXstation/dotfiles/git/githelpers.sh && pretty_git_log"
 	la = !git l --all
 
 [apply]
