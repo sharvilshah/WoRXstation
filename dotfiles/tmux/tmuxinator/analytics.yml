@@ -21,6 +21,7 @@ windows:
   - api: cd api
   - collector: cd collector
   - ljack: cd lumberjack
+  - job: cd job
   - itest: cd integration-test
 
 
