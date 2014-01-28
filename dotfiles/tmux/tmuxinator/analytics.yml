@@ -2,7 +2,7 @@
 
 name: analytics
 root: ~/work/analytics
-pre: mongod -v --fork --smallfiles
+pre: mongod -v --fork --smallfiles --quiet
 
 # Optional tmux socket
 # socket_name: foo

@@ -55,7 +55,10 @@ install wget
 install lftp
 install ncftp
 install rtorrent
+
+# AWS tools
 install s3cmd
+install ec2-api-tools
 
 # Network / benchmarking
 install mtr
@@ -76,6 +79,10 @@ install autojump
 install lame
 install ffmpeg
 install media-info
+
+# Fun
+install cowsay
+install fortune
 
 # clean up
 cleanup
