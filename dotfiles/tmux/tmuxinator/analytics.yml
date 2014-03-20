@@ -1,7 +1,7 @@
 # ~/.tmuxinator/analytics.yml
 
 name: analytics
-root: ~/work/analytics
+root: /Users/sshah/work/analytics
 pre: mongod -v --fork --smallfiles --quiet
 
 # Optional tmux socket
