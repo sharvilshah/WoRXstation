@@ -53,6 +53,11 @@ ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$WHITE%}[%{$YELLOW_IN%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}] "
 
+local rvm_ruby='‹$(rvm-prompt i v g)›%{$reset_color%}'
+local current_dir='${PWD/#$HOME/~}'
+local java_idea_dir='${PWD}/.idea'
+local git_info='$(git_prompt_info)'
+local git_extra_info='$(git_prompt_short_sha)$(git_prompt_status)'
 
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
@@ -67,14 +72,21 @@ function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }
 
-local rvm_ruby='‹$(rvm-prompt i v g)›%{$reset_color%}'
-local current_dir='${PWD/#$HOME/~}'
-local git_info='$(git_prompt_info)'
-local git_extra_info='$(git_prompt_short_sha)$(git_prompt_status)'
+function java_version { 
+    [ -d "$(PWD)/.idea" ] && java -version 2>&1 | awk '/version/ {print "jdk" substr($3,2,3)}'
+}
+
 
 
 #PROMPT="%{$GREEN%}%n%{$reset_color%} %{$GREY%}at%{$reset_color%} %{$BLUE%}$(box_name)%{$reset_color%} %{$GREY%}in%{$reset_color%} #%{$terminfo[bold]$YELLOW%}${current_dir}%{$reset_color%}${git_info}"
 
 
-PROMPT="%{$GREEN%}%n%{$reset_color%} %{$GREY%}at%{$reset_color%} %{$BLUE%}$(box_name)%{$reset_color%} %{$GREY%}in%{$reset_color%} %{$terminfo[bold]$YELLOW%}${current_dir}%{$reset_color%}${git_info} %{$GREY%}%{$reset_color%}%{$GREY%}${git_extra_info}
+PROMPT="%{$GREEN%}%n%{$reset_color%} %{$GREY%}at%{$reset_color%} %{$BLUE%}$(box_name)%{$reset_color%} %{$GREY%}in%{$reset_color%} %{$terminfo[bold]$YELLOW%}${current_dir}%{$reset_color%}${git_info} %{$GREY%}${git_extra_info} $(java_version)%{$reset_color%}
 %{$FG[239]%}$(prompt_char)%{$reset_color%} "
+
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=063
+
+# for history-substring search, update broke, this fixes it
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
