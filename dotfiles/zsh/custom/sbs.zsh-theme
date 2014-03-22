@@ -64,7 +64,7 @@ function virtualenv_info {
 }
 
 function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '❯' && return
+    #git branch >/dev/null 2>/dev/null && echo '❯' && return
     echo '❯'
 }
 
@@ -80,9 +80,9 @@ function java_version {
 
 #PROMPT="%{$GREEN%}%n%{$reset_color%} %{$GREY%}at%{$reset_color%} %{$BLUE%}$(box_name)%{$reset_color%} %{$GREY%}in%{$reset_color%} #%{$terminfo[bold]$YELLOW%}${current_dir}%{$reset_color%}${git_info}"
 
-
-PROMPT="%{$GREEN%}%n%{$reset_color%} %{$GREY%}at%{$reset_color%} %{$BLUE%}$(box_name)%{$reset_color%} %{$GREY%}in%{$reset_color%} %{$terminfo[bold]$YELLOW%}${current_dir}%{$reset_color%}${git_info} %{$GREY%}${git_extra_info} $(java_version)%{$reset_color%}
-%{$FG[239]%}$(prompt_char)%{$reset_color%} "
+local ret_status="%(?:%{$fg_bold[239]%}❯:%{$fg[red]%}❯%s)"
+PROMPT="%{$GREEN%}%n%{$reset_color%} %{$GREY%}at%{$reset_color%} %{$BLUE%}$(box_name)%{$reset_color%} %{$GREY%}in%{$reset_color%} %{$terminfo[bold]$YELLOW%}${current_dir}%{$reset_color%}${git_info} %{$GREY%}${git_extra_info}%{$reset_color%}
+%{$FG[239]%}${ret_status}%{$reset_color%} "
 
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=063
 
